@@ -13,9 +13,12 @@ route::middleware([adminmiddleware::class])->group(function(){
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
-
     
 });
+Route::get('/adminpanel', function () {
+    return view('admin.index');
+});
+
 
 Route::middleware([
     'auth:sanctum',
