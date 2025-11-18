@@ -1,10 +1,11 @@
 <?php
 
+use App\Http\Controllers\admincontroller;
 use App\Http\Middleware\adminmiddleware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-//wewbsite routes
+//website routes
 
 Route::get('/', function () {
     return view('index');
@@ -32,24 +33,41 @@ Route::get('/page', function () {
 
 
 
-
-
-
-
-
-
-
-
 //admin middleware
 route::middleware([adminmiddleware::class])->group(function(){
     //admin routes
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
-    
 });
+//genre route
+route::post("/addgenre",[admincontroller::class,("genrepost")]);
+Route::get('/genre', function () {
+    return view('genre');
+});
+//artist route
+Route::get('/addalbum', function () {
+    return view('addingalbum');
+});
+route::post("/albumadd",[admincontroller::class,("album")]);
+
+
+
+
+
+
+
+
+
+
 Route::get('/adminpanel', function () {
     return view('admin.index');
+});
+Route::get('/widget', function () {
+    return view('admin.widget');
+});
+Route::get('/blank', function () {
+    return view('admin.blank');
 });
 
 
