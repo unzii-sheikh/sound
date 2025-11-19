@@ -29,16 +29,10 @@ Route::get('/album', function () {
 Route::get('/page', function () {
     return view('layout');
 });
-
-
-
-
-
-
-
-
-
-
+//Admin Sidebar
+Route::get('/Addvideos',function(){
+    return view('Addvideos');
+});
 
 //admin middleware
 route::middleware([adminmiddleware::class])->group(function(){
@@ -51,6 +45,15 @@ Route::get('/dashboard', function () {
 Route::get('/adminpanel', function () {
     return view('admin.index');
 });
+//login route
+// Route::get('/login',function(){
+//     return view('login');
+// });
+
+//Registration route
+// Route::get('/registration',function(){
+//     return view('registration');
+// });
 
 
 Route::middleware([

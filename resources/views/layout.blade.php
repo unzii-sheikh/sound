@@ -40,7 +40,7 @@
                     <nav class="classy-navbar justify-content-between" id="oneMusicNav">
 
                         <!-- Nav brand -->
-                        <a href="index.html" class="nav-brand"><img src="public/img/core-img/logo.png" alt=""></a>
+                        <a href="index.blade.php" class="nav-brand"><img src="public/img/core-img/Sound" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
