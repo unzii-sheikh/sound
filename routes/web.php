@@ -4,6 +4,7 @@ use App\Http\Controllers\admincontroller;
 use App\Http\Middleware\adminmiddleware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\Routing\Route as RoutingRoute;
 
 //website routes
 
@@ -31,8 +32,6 @@ Route::get('/page', function () {
     return view('layout');
 });
 
-
-
 //admin middleware
 route::middleware([adminmiddleware::class])->group(function(){
     //admin routes
@@ -50,13 +49,15 @@ Route::get('/addalbum', function () {
     return view('addingalbum');
 });
 route::post("/albumadd",[admincontroller::class,("album")]);
-
-
-
-
-
-
-
+//album route
+Route::get("/artistupload",[admincontroller::class,("artistuploading")]);
+Route::post("/addartist",[admincontroller::class,("artistconnection")]);
+// music route
+Route::get("/getartist",[admincontroller::class,("artistdata")]);
+Route::get("/musicuploading",[admincontroller::class,('artistdata')]);
+Route::post('/musicupload',[admincontroller::class,('musicadd')]);
+//fetch music routes
+Route::get("/musicfetch",[admincontroller::class,("getmusic")]);
 
 
 

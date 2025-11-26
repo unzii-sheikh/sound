@@ -18,30 +18,44 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <h1 class="text-center">ADD ARTIST</h1>
-        <hr>
-        <form action="/addartist" method="post">
-            @csrf
-            <b class="p-1">ADD ARTIST NAME</b><br>
-            <br>
-            <input type="text" placeholder="ENTER ARTIST NAME" name="name" class="form-control p-2">
-            <br>
-            <b>ADD GENRE NAME</b>
-            <br><br>
-            <select name="genrelist" class="form-control">
-                <option value="">Select category of the Genre</option>
-                @foreach ($records as $gen)
-                <option value="{{$gen->id}}">
-                    {{ $gen->name }}
-                </option>
-                @endforeach
-            </select>
-            <br>
 
-            <button type="submit">ADD the ARTIST</button>
-        </form>
+    <div class="container-fluid">
+        <h1 class="text-center">MUSIC DETAILS</h1>
+        <hr>
+        <table class="table table-stripped">
+            <tr>
+                
+                    <td>No</td>
+                    <td>NAME</td>
+                    <td>ARTIST NAME</td>
+                    <td>ALBUM NAME</td>
+                    <td>MUISC TYPE</td>
+                    <td>MUISC FILE</td>
+                
+            </tr>
+            @foreach($musics as $m)
+            <tr>
+                <td>No</td>
+                    <td>{{$m->name}}</td>
+                    <td>{{$m->artistid}}</td>
+                    <td>{{$m->albumid}}</td>
+                    <td>{{$m->music}}</td>
+                    <td>{{$m->file}}</td>
+                 
+            </tr>
+            @endforeach
+
+
+        </table>
+
+
+
+
+
+
     </div>
+
+
     <script
         src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
