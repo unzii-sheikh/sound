@@ -18,19 +18,22 @@
         />
     </head>
 
-    <body>
+    <body class="bg-dark text-light">
         <div class="container-fluid">
-            <h1 class="text-center">ADDING ALBUM</h1>
+            <br>
+            <h1 class="text-center">UPLOAD ALBUM</h1>
             <hr>
-            <form action="/albumadd" method="post">
+            <form action="/albumadding" method="post">
                 @csrf
-                <input type="text" placeholder="Enter Album Name" name="name">
+                <b>ADD ALBUM NAME</b>
+                <BR></BR>
+                <input type="text" placeholder="ENTER ALBUM NAME" name="name" class="form-control">
                 <br>
+                <b>ADD ALBUM RELEASING DATE</b>
+                <br><br>
+                <input type="year" placeholder="ENTER RELEASING DATE" name="year" class="form-control">
                 <br>
-                <input type="year" placeholder="Enter Album Year" name="year">
-                <br>
-                <br>
-                <button type="submit">ADD ALBUM</button>
+                <button type="submit" class="btn btn-primary">ADD ALBUM</button>
             </form>
 
         </div>

@@ -18,24 +18,43 @@
         />
     </head>
 
-    <body class="bg-dark text-light">
-        <div class="container-fluid">
-            <br>
-            <h1 class="text-center">
-                ADD GENRE CATEGORY
-            </h1>
-            <hr>
-            <form action="/addgenre" method="post">
-                @csrf
-                <b>ADD GENRE</b>
-                <br><br>
-                <input type="text" placeholder="Enter gender name" name="name" class="form-control">
-                <br>
-                <button type="submit" class="btn btn-primary">ADD GENRE</button>
-            </form>
+    <body>
+       <div class="container-fluid">
+        <br>
+        <h1>UPDATE MUSIC DETAILS</h1>
+       <hr>
+       <form action="/updatadata" method="post">
+        @csrf
+        
+        <input type="hidden" name="id" value="{{$rep->id}}">
+       <b>MUSIC NAME</b>
+       <br>
+       <input type="text" value="{{$rep->name}}" class="form-control">
+       <br>
+       <b>ARTIST NAME</b>
+       <br>
+       <input type="text" value="{{$rep->artistid}}" class="form-control">
+       <br>
+       <b>ALBUM NAME</b>
+       <br>
+       <input type="text" value="{{$rep->albumid}}" class="form-control">
+       <br>
+       <b>MUSIC TYPE</b>
+       <br>
+       <input type="text" value="{{$rep->music}}" class="form-control">
+       <br>
+       <b>GENRE TYPE</b>
+       <br>
+       <input type="text" value="{{$rep->genrename}}" class="form-control">
+       <br>
+        <b>MUSIC FILE</b>
+       <br>
+       <input type="text" value="{{$rep->file}}" class="form-control">
+       <br>
+       
 
-        </div>
-        <!-- Bootstrap JavaScript Libraries -->
+       </form>
+       </div>
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
             integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

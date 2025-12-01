@@ -17,41 +17,57 @@
         crossorigin="anonymous" />
 </head>
 
-<body>
+<body class="bg-dark">
 
-    <div class="container-fluid">
-        <h1 class="text-center">MUSIC DETAILS</h1>
+    <div class="container-fluid text-light">
+        <br>
+        <h1 class="text-center">ALL MUSIC DETAILS</h1>
         <hr>
-        <table class="table table-stripped">
+        <table class="table dark-stripped table-dark">
             <tr>
-                
-                    <td>No</td>
-                    <td>NAME</td>
-                    <td>ARTIST NAME</td>
-                    <td>ALBUM NAME</td>
-                    <td>MUISC TYPE</td>
-                    <td>MUISC FILE</td>
-                
+
+                <td>No</td>
+                <td>NAME</td>
+                <td>ARTIST NAME</td>
+                <td>ALBUM NAME</td>
+                <td>GENRE</td>
+                <td>MUISC TYPE</td>
+                <td>MUISC FILE</td>
+                <td>DELETE RECORD</td>
+                <td>UPDATE RECORD</td>
+
             </tr>
             @foreach($musics as $m)
             <tr>
-                <td>No</td>
-                    <td>{{$m->name}}</td>
-                    <td>{{$m->artistid}}</td>
-                    <td>{{$m->albumid}}</td>
-                    <td>{{$m->music}}</td>
-                    <td>{{$m->file}}</td>
-                 
+                <td>{{$m->musicid}}</td>
+                <td>{{$m->musicname}}</td>
+                <td>{{$m->artistname}}</td>
+                <td>{{$m->albumname}}</td>
+                <td>{{$m->genrename}}</td>
+                <td>{{$m->musictype}}</td>
+                <td>
+                    <a href="{{$m->file}}">Download / View File</a>
+                </td>
+                <td>{{$m->file}}</td>
+
+                <td>
+                    <form action="/delete/{{$m->musicid}}" method="post">
+                        @csrf
+                        <button type="submit" class=" btn btn-danger">DELETE</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="/update/{{$m->musicid}}" method="post">
+                        @csrf
+                        <button type="submit" class="btn btn-success">UPDATE</button>
+                    </form>
+                </td>
+
+
             </tr>
             @endforeach
 
-
         </table>
-
-
-
-
-
 
     </div>
 

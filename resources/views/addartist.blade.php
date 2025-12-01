@@ -17,11 +17,12 @@
         crossorigin="anonymous" />
 </head>
 
-<body>
+<body class="bg-dark text-light">
     <div class="container-fluid">
+        <br>
         <h1 class="text-center">ADD ARTIST</h1>
         <hr>
-        <form action="/addartist" method="post">
+        <form action="/addingartist" method="post" enctype="multipart/form-data">
             @csrf
             <b class="p-1">ADD ARTIST NAME</b><br>
             <br>
@@ -30,16 +31,21 @@
             <b>ADD GENRE NAME</b>
             <br><br>
             <select name="genrelist" class="form-control">
-                <option value="">Select category of the Genre</option>
-                @foreach ($records as $gen)
+                <option value="">SELECT CATEGORY OF THE GENRE</option>
+                @foreach ($compounds as $gen)
                 <option value="{{$gen->id}}">
                     {{ $gen->name }}
                 </option>
                 @endforeach
             </select>
             <br>
-
-            <button type="submit">ADD the ARTIST</button>
+            <b>ADD ARTIST PICTURE</b>
+            <br>
+            <br>
+            <input type="file" placeholder="ENTER ARTIST PICTURE" class="form-control" name="artistphoto">
+            <br>
+            <br>
+            <button type="submit" class="btn btn-primary">ADD THE ARTIST</button>
         </form>
     </div>
     <script

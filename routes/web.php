@@ -44,20 +44,27 @@ route::post("/addgenre",[admincontroller::class,("genrepost")]);
 Route::get('/genre', function () {
     return view('genre');
 });
-//artist route
+//album route
 Route::get('/addalbum', function () {
     return view('addingalbum');
 });
-route::post("/albumadd",[admincontroller::class,("album")]);
-//album route
+//artist form route 
+
+ //album route datanaseconnection
+route::post("/albumadding",[admincontroller::class,("album")]);
+//artist route
 Route::get("/artistupload",[admincontroller::class,("artistuploading")]);
-Route::post("/addartist",[admincontroller::class,("artistconnection")]);
+Route::post("/addingartist",[admincontroller::class,("artistconnection")]);
 // music route
 Route::get("/getartist",[admincontroller::class,("artistdata")]);
 Route::get("/musicuploading",[admincontroller::class,('artistdata')]);
 Route::post('/musicupload',[admincontroller::class,('musicadd')]);
 //fetch music routes
 Route::get("/musicfetch",[admincontroller::class,("getmusic")]);
+//delete music record
+Route::post("/delete/{id}",[admincontroller::class,("deleterecord")]);
+//data transfer to update page
+Route::post("/update/{id}",[admincontroller::class,("updatedata")]);
 
 
 

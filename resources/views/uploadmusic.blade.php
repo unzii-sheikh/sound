@@ -17,43 +17,50 @@
         crossorigin="anonymous" />
 </head>
 
-<body>
-    <div class="container-fluid">
-        <h1 class="text-center">ADD MUSIC FILES</h1>
+<body class="bg-dark">
+    <div class="container-fluid text-light">
+        <br>
+        <h1 class="text-center">MUSIC UPLOADING</h1>
         <hr>
         <form action="/musicupload" method="post" enctype="multipart/form-data">
             @csrf
-            <input type="text" placeholder="Enter your Music Name" name="name">
+            <b class="pt-3">ADD MUSIC NAME</b>
             <br><br>
+            <input type="text" placeholder="Enter your Music Name" name="name" class="form-control">
+            <br>
+            <b>ADD ALBUM NAME</b>
+            <br><br>
+            
+            <select name="artistlist" class="form-control">
+                <option value="">SELECT NAME OF THE ALBUM</option>
+                @foreach($artist as $art)
+                <option value="{{$art->id}}" class="text-dark">{{$art->name}}</option>
+                @endforeach
+            </select>
+            <br>
             <b>ADD ARTIST NAME</b>
             <br><br>
-            <select name="artistlist" class="form-control">
-                <option value="">Select name of the Artist</option>
-                @foreach ($artist as $art)
-                <option value="{{$art->id}}">
-                    {{ $art->name }}
-                </option>
-                @endforeach
-            </select>
-            <br><br>
             <select name="albumlist" class="form-control">
-                <option value="">Select name of the Artist</option>
-                @foreach ($album as $alb)
-                <option value="{{$alb->id}}">
-                    {{ $alb->name }}
-                </option>
-                @endforeach
-            </select>
+    <option value="">SELECT NAME OF THE ALBUM</option>
+    @foreach($album as $alb)
+        <option value="{{$alb->id}}" class="text-dark">{{$alb->name}}</option>
+    @endforeach
+</select>
+<br>
+            <b>ENTER MUSIC TYPE</b>
             <br><br>
-            <select name="musictype" id="">ENTER MUSIC TYPE
+            <select name="musictype" id="" class="form-control">
                 <option value="Audio">AUDIO</option>
                 <option value="Video">VIDEO</option>
             </select>
+            <br>
+            <b>ADD FILE</b>
             <br><br>
-            <input type="file" placeholder="ENTER FILE NAME HERE" name="file">
-            <br><br>
-            <button type="submit">ADD MUSIC</button>
+            <input type="file" placeholder="ENTER FILE NAME HERE" name="file" class="form-control">
+            <br>
+            <button type="submit" class="btn btn-primary">ADD MUSIC</button>
         </form>
+        <br>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

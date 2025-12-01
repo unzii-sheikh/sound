@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string("name");
             $table->integer("genreid");
             $table->foreign("genreid")->references("genre")->on("id");
+            $table->string("file");
             $table->timestamps();
         });
     }
