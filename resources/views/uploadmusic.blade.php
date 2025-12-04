@@ -58,6 +58,10 @@
             <br><br>
             <input type="file" placeholder="ENTER FILE NAME HERE" name="file" class="form-control">
             <br>
+            <b>ADD THUMBNAIL</b>
+            <br><br>
+            <input type="file" placeholder="ENTER THUMBNAIL FILE  HERE" name="thumbnail" class="form-control" >
+            <br>
             <button type="submit" class="btn btn-primary">ADD MUSIC</button>
         </form>
         <br>

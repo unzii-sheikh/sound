@@ -18,41 +18,65 @@
         />
     </head>
 
-    <body>
+    <body class="bg-dark text-light">
        <div class="container-fluid">
         <br>
         <h1>UPDATE MUSIC DETAILS</h1>
        <hr>
-       <form action="/updatadata" method="post">
+       <form action="/updaterecord" method="post" enctype="multipart/form-data">
         @csrf
-        
-        <input type="hidden" name="id" value="{{$rep->id}}">
+        <input type="hidden" name="id" value="{{$rep->musicid}}">
        <b>MUSIC NAME</b>
        <br>
-       <input type="text" value="{{$rep->name}}" class="form-control">
+       <input type="text" value="{{$rep->musicname}}" class="form-control" name="musicname">
        <br>
        <b>ARTIST NAME</b>
+        <select name="artistname" class="form-control">
+                <option value="">SELECT NAME OF THE ALBUM</option>
+                @foreach($artist as $art)
+                <option value="{{$art->id}}" class="text-dark">{{$art->name}}</option>
+                @endforeach
+            </select>
+            <br>
+            <b>ALBUM NAME</b>
+            <br>
+            <select name="albumname" class="form-control">
+    <option value="">SELECT NAME OF THE ALBUM</option>
+    @foreach($album as $alb)
+        <option value="{{$alb->id}}" class="text-dark">{{$alb->name}}</option>
+    @endforeach
+</select>
+<br>
+<b>ADD GENRE NAME</b>
+            <br>
+           
+            <select name="genrename" class="form-control">
+                <option value="">SELECT CATEGORY OF THE GENRE</option>
+                @foreach ($genre as $gen)
+                <option value="{{$gen->genreid}}">
+                    {{ $gen->genreid }}
+                </option>
+                @endforeach
+            </select>
+            <br>
+            <b>ENTER MUSIC TYPE</b>
+            <br>
+            <select name="musictypename" id="" class="form-control">
+                <option value="Audio">AUDIO</option>
+                <option value="Video">VIDEO</option>
+            </select> 
+            <br>       
+            <b>MUSIC FILE</b>
+       <p>{{$rep->musicfile}}</p>
+       <input type="file" value="{{$rep->musicfile}}" class="form-control" name="musicfileupd">
        <br>
-       <input type="text" value="{{$rep->artistid}}" class="form-control">
+        <b>THUMBNAIL FILE</b>
+        <br>
+        <p>{{$rep->thumbnail}}</p>
+       <input type="file" value="{{$rep->thumbnail}}" class="form-control" name="musicthumbnailupd">
        <br>
-       <b>ALBUM NAME</b>
+       <button type="submit" >update</button>
        <br>
-       <input type="text" value="{{$rep->albumid}}" class="form-control">
-       <br>
-       <b>MUSIC TYPE</b>
-       <br>
-       <input type="text" value="{{$rep->music}}" class="form-control">
-       <br>
-       <b>GENRE TYPE</b>
-       <br>
-       <input type="text" value="{{$rep->genrename}}" class="form-control">
-       <br>
-        <b>MUSIC FILE</b>
-       <br>
-       <input type="text" value="{{$rep->file}}" class="form-control">
-       <br>
-       
-
        </form>
        </div>
         <script

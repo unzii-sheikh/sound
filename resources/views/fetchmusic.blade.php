@@ -33,6 +33,7 @@
                 <td>GENRE</td>
                 <td>MUISC TYPE</td>
                 <td>MUISC FILE</td>
+                <td>THUMBNAIL FILE</td>
                 <td>DELETE RECORD</td>
                 <td>UPDATE RECORD</td>
 
@@ -46,9 +47,13 @@
                 <td>{{$m->genrename}}</td>
                 <td>{{$m->musictype}}</td>
                 <td>
-                    <a href="{{$m->file}}">Download / View File</a>
+                    <a href="{{$m->music}}">Download / View File</a>
                 </td>
                 <td>{{$m->file}}</td>
+                <td>
+                    <a href="{{$m->thumbnail}}">Download / View File</a>
+                </td>
+                <td>{{$m->thumbnail}}</td>
 
                 <td>
                     <form action="/delete/{{$m->musicid}}" method="post">

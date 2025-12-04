@@ -65,17 +65,22 @@
                 <div class="col-12">
                     <div class="albums-slideshow owl-carousel">
                         <!-- Single Album -->
+                           @foreach($audio as $aud)
+        @if($aud->musictype == 'Audio')
+                         
                         <div class="single-album">
-                            <img src="img/bg-img/a1.jpg" alt="">
+                            <img src="uploads/{{$aud->thumbnail}}" alt="">
                             <div class="album-info">
-                                <a href="#">
-                                    <h5>The Cure</h5>
-                                </a>
-                                <p>Second Song</p>
+                                <audio src="uploads/{{$aud->musicfile}}"></audio>
+                                    <h5>{{$aud->artistname}}</h5>
+                              
+                                <p>{{$aud->albumname}}</p>
                             </div>
                         </div>
+                        @endif
+                        @endforeach
 
-                        <!-- Single Album -->
+                        <!-- Single Album
                         <div class="single-album">
                             <img src="img/bg-img/a2.jpg" alt="">
                             <div class="album-info">
@@ -86,8 +91,8 @@
                             </div>
                         </div>
 
-                        <!-- Single Album -->
-                        <div class="single-album">
+                         Single Album -->
+                        <!-- <div class="single-album">
                             <img src="img/bg-img/a3.jpg" alt="">
                             <div class="album-info">
                                 <a href="#">
@@ -95,10 +100,10 @@
                                 </a>
                                 <p>First</p>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- Single Album -->
-                        <div class="single-album">
+                        <!-- <div class="single-album">
                             <img src="img/bg-img/a4.jpg" alt="">
                             <div class="album-info">
                                 <a href="#">
@@ -106,10 +111,10 @@
                                 </a>
                                 <p>Second Song</p>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- Single Album -->
-                        <div class="single-album">
+                        <!-- <div class="single-album">
                             <img src="img/bg-img/a5.jpg" alt="">
                             <div class="album-info">
                                 <a href="#">
@@ -117,10 +122,10 @@
                                 </a>
                                 <p>The Album</p>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- Single Album -->
-                        <div class="single-album">
+                        <!-- <div class="single-album">
                             <img src="img/bg-img/a6.jpg" alt="">
                             <div class="album-info">
                                 <a href="#">
@@ -128,10 +133,10 @@
                                 </a>
                                 <p>Unplugged</p>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- Single Album -->
-                        <div class="single-album">
+                        <!-- <div class="single-album">
                             <img src="img/bg-img/a7.jpg" alt="">
                             <div class="album-info">
                                 <a href="#">
@@ -139,7 +144,7 @@
                                 </a>
                                 <p>Songs</p>
                             </div>
-                        </div>
+                        </div> --> 
                     </div>
                 </div>
             </div>

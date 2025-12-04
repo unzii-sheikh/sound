@@ -20,6 +20,7 @@ return new class extends Migration
             $table->foreign("albumid")->references("album")->on("id");
             $table->string("music");
             $table->string("file");
+            $table->string("thumbnail");
             $table->timestamps();
         });
     }
