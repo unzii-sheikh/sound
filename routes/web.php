@@ -75,15 +75,15 @@ Route::get("/fetchmuiscweb",[admincontroller::class,("fetchmusicdata")]);
 Route::get("/fetchmusic2cweb",[admincontroller::class,("fetchmusicdata2")]);
 
 
-Route::get('/adminpanel', function () {
-    return view('admin.index');
-});
-Route::get('/widget', function () {
-    return view('admin.widget');
-});
-Route::get('/blank', function () {
-    return view('admin.blank');
-});
+// Route::get('/adminpanel', function () {
+//     return view('admin.index');
+// });
+// Route::get('/widget', function () {
+//     return view('admin.widget');
+// });
+// Route::get('/blank', function () {
+//     return view('admin.blank');
+// });
 
 
 Route::middleware([

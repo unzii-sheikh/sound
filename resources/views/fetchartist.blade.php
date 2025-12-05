@@ -224,7 +224,7 @@
                         <div class="testimonials-slide owl-carousel">
                             <!-- Single Slide -->
                             <div class="single-slide">
-                                <p>Nam tristique ex vel magna tincidunt, ut porta nisl finibus. Vivamus eu dolor eu quam varius rutrum. Fusce nec justo id sem aliquam fringilla nec non lacus. Suspendisse eget lobortis nisi, ac cursus odio. Vivamus nibh velit, rutrum.</p>
+                                <p>“Every song I discover here feels like it was made just for me. This site has completely changed how I experience music.”.</p>
                                 <div class="testimonial-info d-flex align-items-center">
                                     <div class="testimonial-thumb">
                                         <img src="img/bg-img/t1.jpg" alt="">
@@ -234,7 +234,7 @@
                             </div>
                             <!-- Single Slide -->
                             <div class="single-slide">
-                                <p>Nam tristique ex vel magna tincidunt, ut porta nisl finibus. Vivamus eu dolor eu quam varius rutrum. Fusce nec justo id sem aliquam fringilla nec non lacus. Suspendisse eget lobortis nisi, ac cursus odio. Vivamus nibh velit, rutrum.</p>
+                                <p>"This platform has completely changed how I discover new music. The curated playlists and artist highlights keep me hooked every day!"</p>
                                 <div class="testimonial-info d-flex align-items-center">
                                     <div class="testimonial-thumb">
                                         <img src="img/bg-img/t1.jpg" alt="">
@@ -252,7 +252,7 @@
     <!-- ##### Newsletter & Testimonials Area End ##### -->
 
     <!-- ##### Contact Area Start ##### -->
-    <section class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img" style="background-image: url(img/bg-img/bg-2.jpg);">
+    <!-- <section class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img" style="background-image: url(img/bg-img/bg-2.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -266,7 +266,7 @@
             <div class="row">
                 <div class="col-12">
                     <!-- Contact Form Area -->
-                    <div class="contact-form-area">
+                    <!-- <div class="contact-form-area">
                         <form action="#" method="post">
                             <div class="row">
                                 <div class="col-md-6 col-lg-4">
@@ -298,7 +298,6 @@
                 </div>
             </div>
         </div>
-    </section>
-    <!-- ##### Contact Area End ##### -->
+    </section> -->
 @endsection
 

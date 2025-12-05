@@ -46,18 +46,6 @@
         <option value="{{$alb->id}}" class="text-dark">{{$alb->name}}</option>
     @endforeach
 </select>
-<br>
-<b>ADD GENRE NAME</b>
-            <br>
-           
-            <select name="genrename" class="form-control">
-                <option value="">SELECT CATEGORY OF THE GENRE</option>
-                @foreach ($genre as $gen)
-                <option value="{{$gen->genreid}}">
-                    {{ $gen->genreid }}
-                </option>
-                @endforeach
-            </select>
             <br>
             <b>ENTER MUSIC TYPE</b>
             <br>

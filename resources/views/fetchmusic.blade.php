@@ -26,17 +26,15 @@
         <table class="table dark-stripped table-dark">
             <tr>
 
-                <td>No</td>
-                <td>NAME</td>
-                <td>ARTIST NAME</td>
-                <td>ALBUM NAME</td>
-                <td>GENRE</td>
-                <td>MUISC TYPE</td>
-                <td>MUISC FILE</td>
-                <td>THUMBNAIL FILE</td>
-                <td>DELETE RECORD</td>
-                <td>UPDATE RECORD</td>
-
+                <th>No</th>
+                <th>NAME</th>
+                <th>ARTIST NAME</th>
+                <th>ALBUM NAME</td>
+                <th>GENRE</h>
+                <th>MUISC TYPE</th>
+                <th>MUISC FILE</th>
+                <th>THUMBNAIL FILE</th>
+                <th>OPERATIONS</th>
             </tr>
             @foreach($musics as $m)
             <tr>
@@ -49,11 +47,11 @@
                 <td>
                     <a href="{{$m->music}}">Download / View File</a>
                 </td>
-                <td>{{$m->file}}</td>
+                <!-- <td>{{$m->file}}</td> -->
                 <td>
-                    <a href="{{$m->thumbnail}}">Download / View File</a>
+                    
+                    {{$m->thumbnail}}
                 </td>
-                <td>{{$m->thumbnail}}</td>
 
                 <td>
                     <form action="/delete/{{$m->musicid}}" method="post">

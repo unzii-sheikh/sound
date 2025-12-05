@@ -61,8 +61,7 @@
                                     <li><a href="/">Home</a></li>
                                     <li><a href="/fetchalbums">Albums</a></li>
                                     <li><a href="/fetchartist">Artist</a>
-                                    <li><a href="event.html">Music</a></li>
-                                    <li><a href="blog.html">Videos</a></li>
+                                    <li><a href="/fetchmuiscweb">Videos</a></li>
                                     <li><a href="/blog">blog</a></li>
                                     <!-- <li><a href="contact.html">Contact</a></li>
                                         <ul class="dropdown">
@@ -148,11 +147,11 @@
                 <div class="col-12 col-md-6">
                     <div class="footer-nav">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Albums</a></li>
-                            <li><a href="#">Events</a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/fetchalbums">Albums</a></li>
+                            <li><a href="/fetchartist">Artist</a></li>
+                            <li><a href="/fetchmuiscweb">videos</a></li>
+                            <li><a href="/blog">blog</a></li>
                         </ul>
                     </div>
                 </div>

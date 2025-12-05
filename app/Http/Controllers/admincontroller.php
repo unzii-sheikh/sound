@@ -102,11 +102,10 @@ public function updatemusic(Request $fer){
    $q->artistid=$fer->artistname;
    $q->albumid=$fer->albumname;
    $q->music=$fer->musictypename;
-   $q->genreid=$fer->genrename;
    $q->file=$fer->musicfileupd;
    $q->thumbnail=$fer->musicthumbnailupd;
    $q->save();
-   return redirect("fetchmusic");
+   return redirect("/musicfetch");
 
 }
 

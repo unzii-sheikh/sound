@@ -28,17 +28,17 @@
             <br><br>
             <input type="text" placeholder="Enter your Music Name" name="name" class="form-control">
             <br>
-            <b>ADD ALBUM NAME</b>
+            <b>ADD ARTIST NAME</b>
             <br><br>
             
             <select name="artistlist" class="form-control">
-                <option value="">SELECT NAME OF THE ALBUM</option>
+                <option value="">SELECT NAME OF THE ARTIST</option>
                 @foreach($artist as $art)
                 <option value="{{$art->id}}" class="text-dark">{{$art->name}}</option>
                 @endforeach
             </select>
             <br>
-            <b>ADD ARTIST NAME</b>
+            <b>ADD ALBUM NAME</b>
             <br><br>
             <select name="albumlist" class="form-control">
     <option value="">SELECT NAME OF THE ALBUM</option>
