@@ -19,13 +19,20 @@
     </head>
 
     <body>
-       <h1>yeah user age</h1>
-       <form action="/logout" method="post">
-        @csrf
-        <button type="submit">log out</button>
-       </form>
-       <p>sab galat horaha hai hai sab batayaaa mugh</p>
-       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos et laudantium saepe quos impedit eveniet aperiam, doloremque aspernatur, ea illo illum ex placeat esse commodi quidem repellendus accusantium unde quisquam minima labore. Sapiente ab odit eius fugiat dicta vero dolorum ad maxime numquam cum laboriosam iusto, inventore beatae, accusamus quas.</p>
+        <div class="container-fluid">
+            <h1 class="text-center">
+                Genre category
+            </h1>
+            <hr>
+            <form action="/addgenre" method="post">
+                @csrf
+                <input type="text" placeholder="Enter gender name" name="name">
+                <br>
+                <button type="submit">ADD GENRE</button>
+            </form>
+
+        </div>
+        <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
             integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

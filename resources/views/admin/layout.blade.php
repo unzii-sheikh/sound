@@ -1,25 +1,37 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>DarkPan - Bootstrap 5 Admin Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+    <!-- Favicon -->
+    <link href="admin/img/favicon.ico" rel="icon">
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet"> 
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <!-- Libraries Stylesheet -->
+    <link href="admin/lib/owlcarousel/owl.carousel.min.css" rel="stylesheet">
+    <link href="admin/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
-        <!-- Styles -->
-        @livewireStyles
-    </head>
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="admin/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="admin/css/style.css" rel="stylesheet">
+</head>
     <body>
         <div class="font-sans text-gray-900 antialiased">
-            {{ $slot }}
+        
         </div>
         
 
@@ -51,10 +63,10 @@
                     </div>
                     <a href="widget.blade.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Add Videos</a>
                     <a href="form.blade.php" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Add Artist</a>
-                    <a href="table.blade.php" class="nav-item nav-link"><i class="fa fa-table me-2"></i>User Info</a>
+                    <a href="/admin.fetch" class="nav-item nav-link"><i class="fa fa-table me-2"></i>User Info</a>
                     <a href="chart.blade.php" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Add Genra</a>
 
-                    <a href="/widget" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>
+                    <a href="/admin.trash" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Trash</a>
                     <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
                     <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
                     <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
@@ -163,15 +175,8 @@
                 </div>
             </nav>
             <!-- Navbar End -->
-            
-        <!-- Content End -->
-
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
-@yield('content')
-    <!-- Footer Start -->
+    @yield('content')
+          <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-secondary rounded-top p-4">
                     <div class="row">
@@ -180,15 +185,14 @@
                         </div>
                         <div class="col-12 col-sm-6 text-center text-sm-end">
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                            <br>Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                            <!-- Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+                            <br>Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a> -->
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Footer End -->
         </div>
-         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 

@@ -40,7 +40,7 @@
                     <nav class="classy-navbar justify-content-between" id="oneMusicNav">
 
                         <!-- Nav brand -->
-                        <a href="index.blade.php" class="nav-brand"><img src="public/img/core-img/Sound" alt=""></a>
+                        <a href="index.blade.php" class="nav-brand"><img src="img/core-img/Sound.png" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -60,12 +60,12 @@
                                 <ul>
                                     <li><a href="/">Home</a></li>
                                     <li><a href="albums-store.html">Albums</a></li>
-                                    <li><a href="#">Pages</a>
+                                    <li><a href="#">Artists</a>
                                         <ul class="dropdown">
                                             <li><a href="index.html">Home</a></li>
                                             <li><a href="albums-store.html">Albums</a></li>
-                                            <li><a href="event.html">Events</a></li>
-                                            <li><a href="blog.html">News</a></li>
+                                            <li><a href="event.html">Music</a></li>
+                                            <li><a href="blog.html">Videos</a></li>
                                             <li><a href="contact.html">Contact</a></li>
                                             <li><a href="elements.html">Elements</a></li>
                                             <li><a href="login.html">Login</a></li>
