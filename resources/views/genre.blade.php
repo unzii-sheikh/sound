@@ -18,17 +18,20 @@
         />
     </head>
 
-    <body>
+    <body class="bg-dark text-light">
         <div class="container-fluid">
+            <br>
             <h1 class="text-center">
-                Genre category
+                ADD GENRE CATEGORY
             </h1>
             <hr>
             <form action="/addgenre" method="post">
                 @csrf
-                <input type="text" placeholder="Enter gender name" name="name">
+                <b>ADD GENRE</b>
+                <br><br>
+                <input type="text" placeholder="Enter gender name" name="name" class="form-control">
                 <br>
-                <button type="submit">ADD GENRE</button>
+                <button type="submit" class="btn btn-primary">ADD GENRE</button>
             </form>
 
         </div>

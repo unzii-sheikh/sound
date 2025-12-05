@@ -1,0 +1,194 @@
+Task No.1
+Even and Odd number
+
+num=prompt('enter the number')
+if( num%2==0)
+{
+    document.write("Even number")
+}
+else{
+    document.write( "odd number")
+}
+
+Assignment No.2
+Positive,Negative,Zero
+
+num = prompt('enter the number')
+if(num>=0)
+{
+    document.write('Positive number')
+}
+else if(num<=0)
+{
+    document.write("negative number")
+}
+else{
+    document.write('Zero')
+}
+
+Assignment No.3
+Greater Number
+
+num1 = prompt( 'enter number 1')
+num2 = prompt('enter number 2')
+if( num1>=num2)
+{
+    document.write("number 1 is greater than number 2")
+}
+else if(num2>=num1)
+{
+    document.write('number 2 is greater than number 1')
+}  
+
+Assignment No.4
+Age Verification
+
+age = prompt('enter your age')
+if(age>=18)
+{
+    document.write('you are eligible to vote')
+}
+else{
+    document.write('you are not eligible to vote')
+}
+
+Task No.5
+Login System
+
+user = prompt("enter your name")
+password = prompt("enter your password")
+
+if(user.toLowerCase()=="unzila" && password=="12345")
+{
+    document.write("login successfully")
+}
+else{
+    document.write("Unvalid information")
+}
+
+Task No.6
+Leap Year
+
+year = prompt("Enter the year")
+if(year%4==0)
+{
+    document.write('its a leap year')
+}
+else{
+    document.write('its Not a leap Year')
+}
+
+Task No.7
+Grade System
+
+num=prompt('enter your marks')
+marks=num/550*100
+if(marks>=80 && marks<=100)
+{
+    document.write("A*")
+}
+else if(marks>=70 && marks<=79)
+{
+    document.write('A')
+
+}
+else if( marks>=60 && marks<=69)
+{
+    document.write('B')
+}
+else if( marks>=50 && marks<=59)
+{
+    document.write('C')
+
+}
+else if(marks>=40 && marks<=49)
+{
+    document.write('D')
+}
+else{
+    document.write('fail')
+}
+
+Task No.8
+Divisible By 5 And 11
+
+enter1 = prompt('enter number 1')
+if(enter1%5==0 && enter1%11==0)
+{
+    document.write('it is divisible by 5 and 11')
+}   
+else{
+    document.write('it is not divisible by 5 and 11')
+}
+
+Task No.9
+Traffic light Color
+
+light=prompt('enter your color')
+if( light== "red")
+{
+    document.write("stop")
+}
+else if( light=="yellow")
+{
+    document.write("Get ready")
+}
+else if(light=="green")
+{
+    document.write("Go")
+}
+else{
+    document.write("its not a traffic colour")
+}
+
+Task No.10
+Vowels and Constant
+
+alpha=prompt('enter your alphabet')
+if(alpha.toLowerCase()=="a" || alpha.toLowerCase()=='e' || alpha.toLowerCase()=='i' || alpha.toLowerCase()=='o' || alpha.toLowerCase()=='u')
+{
+    document.write("vowels")
+}
+else if(alpha.toLowerCase()=="b" || alpha.toLowerCase()=='c' || alpha.toLowerCase()=='d' || alpha.toLowerCase()=="f" || alpha.toLowerCase()=='g' || alpha.toLowerCase()=='h' || alpha.toLowerCase()=='j' ||   alpha.toLowerCase()=='k' || alpha.toLowerCase()=='l' || alpha.toLowerCase()=='m' || alpha.toLowerCase()=='n' || alpha.toLowerCase()=='p' || alpha.toLowerCase()=='q' || alpha.toLowerCase()=='r' || alpha.toLowerCase()=='s' || alpha.toLowerCase()=='t' || alpha.toLowerCase()=='v' || alpha.toLowerCase()=='x' || alpha.toLowerCase()=='y' || alpha.toLowerCase()=='z')
+{
+    document.write ("constant")
+}
+else{
+    document.write("its not a alphabet")
+}  
+
+             "Assignment"
+table
+
+a=prompt('enter the table number')
+for(i=1;i<=101;i++){
+    document.write(a*i)
+    document.write("<br>")
+}
+
+important code
+
+ opt = prompt ('enter the website name')
+if (opt.toLowerCase()=='youtube') {
+    window.location.href='https://www.youtube.com/'     
+
+}
+else if (opt.toLowerCase()=='google')
+{
+    window.location.href='https://www.google.com/'
+}
+else if(opt.toLowerCase()=='facebook')
+{
+    window.location.href='https://www.facebook.com/'
+}
+else{
+    document.write('not found')
+}
+
+
+
+
+
+
+
+

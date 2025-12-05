@@ -6,19 +6,18 @@ use App\Http\Middleware\adminmiddleware;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\Routing\Route as RoutingRoute;
 
 
 
 //website routes
 
-Route::get('/', function () {
-    return view('index');
+Route::get('/', [admincontroller::class,('getmusics')]);
+Route::get('/artists', function () {
+    return view('fetchartist');
 });
-Route::get('/event', function () {
-    return view('event');
-});
-Route::get('/elements', function () {
-    return view('elements');
+Route::get('/albums', function () {
+    return view('fetchalbums');
 });
 Route::get('/contact', function () {
     return view('contact');
@@ -26,14 +25,18 @@ Route::get('/contact', function () {
 Route::get('/blog', function () {
     return view('blog');
 });
-Route::get('/album', function () {
-    return view('album-store');
+Route::get('/album2', function () {
+    return view('albums-store');
 });
 
 
 Route::get('/page', function () {
     return view('layout');
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9dc94a51b1765674b285ba5ffd77820d484490c0
 //admin middleware
 Route::middleware([adminmiddleware::class])->group(function(){
     //admin routes
@@ -47,12 +50,45 @@ Route::post("/addgenre",[admincontroller::class,("genrepost")]);
 Route::get('/genre', function () {
     return view('genre');
 });
-//artist route
+//album route
 Route::get('/addalbum', function () {
     return view('addingalbum');
 });
+<<<<<<< HEAD
 Route::post("/albumadd",[admincontroller::class,("album")]);
 Route::get('/adminindex', function () {
+=======
+//artist form route 
+
+ //album route datanaseconnection
+route::post("/albumadding",[admincontroller::class,("album")]);
+//artist route
+Route::get("/artistupload",[admincontroller::class,("artistuploading")]);
+Route::post("/addingartist",[admincontroller::class,("artistconnection")]);
+// music route
+Route::get("/getartist",[admincontroller::class,("artistdata")]);
+Route::get("/musicuploading",[admincontroller::class,('artistdata')]);
+Route::post('/musicupload',[admincontroller::class,('musicadd')]);
+//fetch music routes
+Route::get("/musicfetch",[admincontroller::class,("getmusic")]);
+//delete music record
+Route::post("/delete/{id}",[admincontroller::class,("deleterecord")]);
+//data transfer to update page
+Route::post("/update/{id}",[admincontroller::class,("updatedata")]);
+//update music route
+Route::post('/updaterecord',[admincontroller::class,("updatemusic")]);
+
+//get artist on artist page not should be in middleware
+Route::get("/fetchartist",[admincontroller::class,("fetalbums")]);
+//get albums on artist page on website not should be in middleware
+Route::get("/fetchalbums",[admincontroller::class,("fetchalb")]);
+// music fetch in website
+Route::get("/fetchmuiscweb",[admincontroller::class,("fetchmusicdata")]);
+Route::get("/fetchmusic2cweb",[admincontroller::class,("fetchmusicdata2")]);
+
+
+Route::get('/adminpanel', function () {
+>>>>>>> 9dc94a51b1765674b285ba5ffd77820d484490c0
     return view('admin.index');
 });
 //admin pages
