@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('albums', function (Blueprint $table) {
             $table->id();
             $table->string("name");
-            $table->integer("year");
+            $table->date("year");
             $table->timestamps();
         });
     }

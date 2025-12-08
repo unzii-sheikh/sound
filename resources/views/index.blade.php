@@ -398,7 +398,7 @@
                         <p>See what’s new</p>
                         <h2>Buy What’s New</h2>
                     </div>
-                    <p>Nam tristique ex vel magna tincidunt, ut porta nisl finibus. Vivamus eu dolor eu quam varius rutrum. Fusce nec justo id sem aliquam fringilla nec non lacus. Suspendisse eget lobortis nisi, ac cursus odio. Vivamus nibh velit, rutrum at ipsum ac, dignissim iaculis ante. Donec in velit non elit pulvinar pellentesque et non eros.</p>
+                    <p>Music drifted through the room like a warm, invisible wave, wrapping everything in a gentle rhythm. Each note shimmered in the air, rising softly before melting into the next, creating a calm and colorful flow. It felt as if the melody carried a story of its own—one filled with quiet moments,</p>
                     <div class="song-play-area">
                         <div class="song-name">
                             <p>01. Main Hit Song</p>
@@ -700,7 +700,7 @@
 <!-- 
             <div class="row">
                 <div class="col-12">
-                    <!-- Contact Form Area -->
+                    Contact Form Area -->
 <!-- <div class="contact-form-area">
                         <form action="#" method="post">
                             <div class="row">
@@ -733,6 +733,6 @@
                 </div>
             </div>
         </div>
-    </section> --> -->
+    </section> --> 
 
 @endsection

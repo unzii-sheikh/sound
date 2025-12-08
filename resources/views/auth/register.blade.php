@@ -1,10 +1,18 @@
 <x-guest-layout>
+    <div class="min-h-screen flex items-center justify-center"
+        style="background-image: url('public/img/bg-img/b1.jpg');
+               background-size: cover;
+               background-position: center;
+               background-repeat: no-repeat;
+               ">
+
+        <div class="bg-white/90 backdrop-blur-md p-8 rounded-lg shadow-xl w-full max-w-md">
     <x-authentication-card>
-        <x-slot name="logo">
-            <x-authentication-card-logo />
+        <x-slot name="logo">    
         </x-slot>
 
         <x-validation-errors class="mb-4" />
+        <h2 class="text-2xl font-bold text-center mb-6">Create Your Account</h2>
 
         <form method="POST" action="{{ route('register') }}">
             @csrf

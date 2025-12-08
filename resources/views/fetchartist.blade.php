@@ -206,7 +206,7 @@
                         </div>
                         <div class="newsletter-form">
                             <form action="#">
-                                <input type="search" name="search" id="newsletterSearch" placeholder="E-mail">
+                                <input type="search" name="search" id="newsletterSearch" placeholder="E-mail" id="input">
                                 <button type="submit" class="btn oneMusic-btn">Subscribe <i class="fa fa-angle-double-right"></i></button>
                             </form>
                         </div>
@@ -265,7 +265,7 @@
 
             <div class="row">
                 <div class="col-12">
-                    <!-- Contact Form Area -->
+                    Contact Form Area -->
                     <!-- <div class="contact-form-area">
                         <form action="#" method="post">
                             <div class="row">

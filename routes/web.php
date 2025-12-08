@@ -1,10 +1,14 @@
 <?php
 
 use App\Http\Controllers\admincontroller;
+use App\Http\Controllers\UserController;
 use App\Http\Middleware\adminmiddleware;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Symfony\Component\Routing\Route as RoutingRoute;
+
+
 
 //website routes
 
@@ -31,20 +35,26 @@ Route::get('/page', function () {
 });
 
 //admin middleware
-route::middleware([adminmiddleware::class])->group(function(){
+Route::middleware([adminmiddleware::class])->group(function(){
     //admin routes
-Route::get('/dashboard', function () {
-    return view('dashboard');
+
 });
+Route::get('/adminindex', function () {
+    return view('admin.index');
 });
 //genre route
-route::post("/addgenre",[admincontroller::class,("genrepost")]);
+Route::post("/addgenre",[admincontroller::class,("genrepost")]);
 Route::get('/genre', function () {
     return view('genre');
 });
 //album route
 Route::get('/addalbum', function () {
     return view('addingalbum');
+});
+Route::post("/albumadd",[admincontroller::class,("album")]);
+Route::get('/adminindex', function () 
+{
+    return view();
 });
 //artist form route 
 
@@ -85,7 +95,55 @@ Route::get("/fetchmusic2cweb",[admincontroller::class,("fetchmusicdata2")]);
 //     return view('admin.blank');
 // });
 
+Route::get('/adminpanel', function () {
 
+    return view('admin.index');
+});
+//admin pages
+Route::get('/element', function () {
+    return view('admin.element');
+});
+Route::get('/chart', function () {
+    return view('admin.chart');
+});
+Route::get('/button', function () {
+    return view('admin.button');
+});
+Route::get('/blank', function () {
+    return view('admin.blank');
+});
+Route::get('/Addvideos', function () {
+    return view('admin.Addvideos');
+});
+
+//users rout Crud//
+// Users CRUD Routes
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
+
+    // Fetch all registered users
+    Route::get('admin.fetch', [UserController::class, 'fetch'])->name('admin.fetch');
+    // Show edit form
+    Route::get('admin.users.{id}.edit', [UserController::class, 'edit'])->name('admin.edit');
+
+    // Update user
+    Route::put('admin.users.{id}', [UserController::class, 'update'])->name('admin.update');
+
+    // Delete user
+    Route::delete('admin.users.{id}', [UserController::class, 'destroy'])->name('admin.delete');
+
+});
+/// trash //
+// Trash page
+Route::get('admin.trash', [UserController::class, 'trash'])->name('admin.trash');
+
+// Recover user
+Route::post('admin.trash/{id}/recover', [UserController::class, 'recover'])->name('admin.recover');
+
+// Permanent delete
+Route::delete('admin.trash/{id}/permanent', [UserController::class, 'permanentDelete'])->name('admin.permanentDelete');
+
+
+//jetstream middleware//
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -93,11 +151,12 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', function () {
         if(Auth::user()->role == "admin"){
-
-            return view('dashboard');
+            return view('adminpanel');
         }
         else{
             return redirect("/");
         }
     })->name('dashboard');
 });
+// TRD //
+// Trash page
