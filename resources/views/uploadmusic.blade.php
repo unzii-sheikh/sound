@@ -1,78 +1,119 @@
-<!doctype html>
-<html lang="en">
+@extends('admin.layout')
 
-<head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+@section('content')
+<div class="container py-5" style="min-height: 100vh; background-color: #0b0b0b;"> <!-- Dark background for page -->
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <div class="card text-light shadow-lg border-0 rounded-4" style="padding: 50px; background-color: #2f2f2f;"> <!-- Charcoal card -->
 
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-        crossorigin="anonymous" />
-</head>
+                <!-- Card Header with Red Background -->
+                <div class="card-header text-center rounded-3 mb-5" style="background-color: #dc3545;"> <!-- Bootstrap red -->
+                    <h2 class="mb-0 fw-bold text-white">MUSIC UPLOADING</h2>
+                </div>
 
-<body class="bg-dark">
-    <div class="container-fluid text-light">
-        <br>
-        <h1 class="text-center">MUSIC UPLOADING</h1>
-        <hr>
-        <form action="/musicupload" method="post" enctype="multipart/form-data">
-            @csrf
-            <b class="pt-3">ADD MUSIC NAME</b>
-            <br><br>
-            <input type="text" placeholder="Enter your Music Name" name="name" class="form-control">
-            <br>
-            <b>ADD ALBUM NAME</b>
-            <br><br>
-            
-            <select name="artistlist" class="form-control">
-                <option value="">SELECT NAME OF THE ALBUM</option>
-                @foreach($artist as $art)
-                <option value="{{$art->id}}" class="text-dark">{{$art->name}}</option>
-                @endforeach
-            </select>
-            <br>
-            <b>ADD ARTIST NAME</b>
-            <br><br>
-            <select name="albumlist" class="form-control">
-    <option value="">SELECT NAME OF THE ALBUM</option>
-    @foreach($album as $alb)
-        <option value="{{$alb->id}}" class="text-dark">{{$alb->name}}</option>
-    @endforeach
-</select>
-<br>
-            <b>ENTER MUSIC TYPE</b>
-            <br><br>
-            <select name="musictype" id="" class="form-control">
-                <option value="Audio">AUDIO</option>
-                <option value="Video">VIDEO</option>
-            </select>
-            <br>
-            <b>ADD FILE</b>
-            <br><br>
-            <input type="file" placeholder="ENTER FILE NAME HERE" name="file" class="form-control">
-            <br>
-            <b>ADD THUMBNAIL</b>
-            <br><br>
-            <input type="file" placeholder="ENTER THUMBNAIL FILE  HERE" name="thumbnail" class="form-control" >
-            <br>
-            <button type="submit" class="btn btn-primary">ADD MUSIC</button>
-        </form>
-        <br>
+                <!-- Form -->
+                <div class="card-body">
+                    <form action="/musicupload" method="post" enctype="multipart/form-data">
+                        @csrf
+
+                        <!-- Music Name -->
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">Music Name</label>
+                            <input type="text" name="name" placeholder="Enter your Music Name" 
+                                class="form-control bg-white text-dark border-secondary rounded-3 px-3 py-2" 
+                                style="transition: all 0.3s;">
+                        </div>
+
+                        <!-- Artist Name -->
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">Artist Name</label>
+                            <select name="artistlist" 
+                                class="form-control bg-white text-dark border-secondary rounded-3 px-3 py-2" 
+                                style="transition: all 0.3s;">
+                                <option value="">Select Artist</option>
+                                @foreach($artist as $art)
+                                    <option value="{{$art->id}}">{{$art->name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <!-- Album Name -->
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">Album Name</label>
+                            <select name="albumlist" 
+                                class="form-control bg-white text-dark border-secondary rounded-3 px-3 py-2" 
+                                style="transition: all 0.3s;">
+                                <option value="">Select Album</option>
+                                @foreach($album as $alb)
+                                    <option value="{{$alb->id}}">{{$alb->name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <!-- Music Type -->
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">Music Type</label>
+                            <select name="musictype" 
+                                class="form-control bg-white text-dark border-secondary rounded-3 px-3 py-2" 
+                                style="transition: all 0.3s;">
+                                <option value="Audio">Audio</option>
+                                <option value="Video">Video</option>
+                            </select>
+                        </div>
+
+                        <!-- File Upload -->
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">Upload Music File</label>
+                            <input type="file" name="file" 
+                                class="form-control bg-white text-dark border-secondary rounded-3 px-3 py-2" 
+                                style="transition: all 0.3s;">
+                        </div>
+
+                        <!-- Thumbnail Upload -->
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">Upload Thumbnail</label>
+                            <input type="file" name="thumbnail" 
+                                class="form-control bg-white text-dark border-secondary rounded-3 px-3 py-2" 
+                                style="transition: all 0.3s;">
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="text-center mt-5">
+                            <button type="submit" 
+                                class="btn btn-danger btn-lg w-50 rounded-pill shadow-sm" 
+                                style="transition: all 0.3s;" onclick="alert()">Upload Music</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
-</body>
+<!-- Optional: Hover/focus effect -->
+<style>
+    input.form-control:focus, select.form-control:focus {
+        border-color: #dc3545; /* red highlight */
+        box-shadow: 0 0 10px rgba(220, 53, 69, 0.5);
+        outline: none;
+    }
 
-</html>
+    button.btn-danger:hover {
+        background-color: #c82333;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="animation.js"></script>
+<script>
+    function alert(){
+    Swal.fire({
+  title: "Successfully added music!",
+  icon: "primary",
+  iconColor :' #a51e1eff',
+  confirmButtonColor :' #bd1919ff',
+});
+  }
+</script>
+
+@endsection

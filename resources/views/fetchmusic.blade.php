@@ -1,91 +1,59 @@
-<!doctype html>
-<html lang="en">
+@extends('admin.layout')
 
-<head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+@section('content')
+<div class="container-fluid text-light py-4">
+    <h1 class="text-center mb-4">All Music Details</h1>
+    <hr class="bg-light">
 
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-        crossorigin="anonymous" />
-</head>
-
-<body class="bg-dark">
-
-    <div class="container-fluid text-light">
-        <br>
-        <h1 class="text-center">ALL MUSIC DETAILS</h1>
-        <hr>
-        <table class="table dark-stripped table-dark">
-            <tr>
-
-                <td>No</td>
-                <td>NAME</td>
-                <td>ARTIST NAME</td>
-                <td>ALBUM NAME</td>
-                <td>GENRE</td>
-                <td>MUISC TYPE</td>
-                <td>MUISC FILE</td>
-                <td>THUMBNAIL FILE</td>
-                <td>DELETE RECORD</td>
-                <td>UPDATE RECORD</td>
-
-            </tr>
-            @foreach($musics as $m)
-            <tr>
-                <td>{{$m->musicid}}</td>
-                <td>{{$m->musicname}}</td>
-                <td>{{$m->artistname}}</td>
-                <td>{{$m->albumname}}</td>
-                <td>{{$m->genrename}}</td>
-                <td>{{$m->musictype}}</td>
-                <td>
-                    <a href="{{$m->music}}">Download / View File</a>
-                </td>
-                <td>{{$m->file}}</td>
-                <td>
-                    <a href="{{$m->thumbnail}}">Download / View File</a>
-                </td>
-                <td>{{$m->thumbnail}}</td>
-
-                <td>
-                    <form action="/delete/{{$m->musicid}}" method="post">
-                        @csrf
-                        <button type="submit" class=" btn btn-danger">DELETE</button>
-                    </form>
-                </td>
-                <td>
-                    <form action="/update/{{$m->musicid}}" method="post">
-                        @csrf
-                        <button type="submit" class="btn btn-success">UPDATE</button>
-                    </form>
-                </td>
-
-
-            </tr>
-            @endforeach
-
+    <div class="table-responsive">
+        <table class="table table-dark table-striped table-hover align-middle">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Artist Name</th>
+                    <th>Album Name</th>
+                    <th>Genre</th>
+                    <th>Music Type</th>
+                    <th>Music File</th>
+                    <th>Thumbnail</th>
+                    <th colspan="2" class="text-center">Operations</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($musics as $m)
+                <tr>
+                    <td>{{ $m->musicid }}</td>
+                    <td>{{ $m->musicname }}</td>
+                    <td>{{ $m->artistname }}</td>
+                    <td>{{ $m->albumname }}</td>
+                    <td>{{ $m->genrename }}</td>
+                    <td>{{ $m->musictype }}</td>
+                    <td>
+                        <a href="{{ $m->music }}" class="text-decoration-none text-info" target="_blank">
+                            Download / View
+                        </a>
+                    </td>
+                    <td>
+                        
+                            {{ $m->thumbnail }}
+                    </td>
+                    <td>
+                        <form action="{{ url('/delete/'.$m->musicid) }}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn btn-danger btn-sm w-100">Delete</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="{{ url('/update/'.$m->musicid) }}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn btn-success btn-sm w-100">Update</button>
+                        </form>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
         </table>
-
     </div>
-
-
-    <script
-        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
-</body>
-
-</html>
+</div>
+@endsection

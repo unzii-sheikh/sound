@@ -31,15 +31,15 @@
                         <!-- Blog Content -->
                         <div class="blog-content">
                             <!-- Post Title -->
-                            <a href="#" class="post-title">5 Festivals you shouldn’t miss this summer</a>
+                            <a href="#" class="post-title">🎤 Top Artists Making Waves Right Now</a>
                             <!-- Post Meta -->
                             <div class="post-meta d-flex mb-30">
-                                <p class="post-author">By<a href="#"> Admin</a></p>
+                                <!-- <p class="post-author">By<a href="#"> Admin</a></p>
                                 <p class="tags">in<a href="#"> Events</a></p>
-                                <p class="tags"><a href="#">2 Comments</a></p>
+                                <p class="tags"><a href="#">2 Comments</a></p> -->
                             </div>
                             <!-- Post Excerpt -->
-                            <p>Pellentesque sit amet velit a libero viverra porta non eu justo. Vivamus mollis metus sem, ac sodales dui lobortis. Pellentesque sit amet velit a libero viverra porta non eu justo. Vivamus mollis metus sem, ac sodales dui lobortis.</p>
+                            <p>Music is more than sound; it’s a form of motion that moves the mind. It can transform silence into a story, a heartbeat into a rhythm, and a fleeting feeling into a memory. Every instrument, every voice, is like a brushstroke on the canvas of time, painting moods and moments that linger long after the last note fades.</p>
                         </div>
                     </div>
 
@@ -58,15 +58,15 @@
                         <!-- Blog Content -->
                         <div class="blog-content">
                             <!-- Post Title -->
-                            <a href="#" class="post-title">5 Festivals you shouldn’t miss this summer</a>
+                            <a href="#" class="post-title">🎧 Featured Albums You Can’t Miss</a>
                             <!-- Post Meta -->
                             <div class="post-meta d-flex mb-30">
-                                <p class="post-author">By<a href="#"> Admin</a></p>
+                                <!-- <p class="post-author">By<a href="#"> Admin</a></p>
                                 <p class="tags">in<a href="#"> Events</a></p>
-                                <p class="tags"><a href="#">2 Comments</a></p>
+                                <p class="tags"><a href="#">2 Comments</a></p> -->
                             </div>
                             <!-- Post Excerpt -->
-                            <p>Pellentesque sit amet velit a libero viverra porta non eu justo. Vivamus mollis metus sem, ac sodales dui lobortis. Pellentesque sit amet velit a libero viverra porta non eu justo. Vivamus mollis metus sem, ac sodales dui lobortis.</p>
+                            <p>music shapes our moods, memories, and experiences. It serves as both a form of personal expression and a shared cultural celebration, constantly evolving with new genres, styles, and technological innovations. Whether enjoyed live, through recordings, or in digital streams, music remains a vital part of human life, inspiring creativity, connection, and joy.</p>
                         </div>
                     </div>
 
@@ -85,27 +85,27 @@
                         <!-- Blog Content -->
                         <div class="blog-content">
                             <!-- Post Title -->
-                            <a href="#" class="post-title">5 Festivals you shouldn’t miss this summer</a>
+                            <a href="#" class="post-title">🎵 Trending Hits of the Week</a>
                             <!-- Post Meta -->
                             <div class="post-meta d-flex mb-30">
-                                <p class="post-author">By<a href="#"> Admin</a></p>
+                                <!-- <p class="post-author">By<a href="#"> Admin</a></p>
                                 <p class="tags">in<a href="#"> Events</a></p>
-                                <p class="tags"><a href="#">2 Comments</a></p>
+                                <p class="tags"><a href="#">2 Comments</a></p> -->
                             </div>
                             <!-- Post Excerpt -->
-                            <p>Pellentesque sit amet velit a libero viverra porta non eu justo. Vivamus mollis metus sem, ac sodales dui lobortis. Pellentesque sit amet velit a libero viverra porta non eu justo. Vivamus mollis metus sem, ac sodales dui lobortis.</p>
+                            <p>Music is more than sound—it’s a universal language that connects people across cultures and experiences. Whether it’s the pulse of a live show, the emotion of a soulful vocal, or the energy of a festival crowd, music brings moments to life. Every beat tells a story, and every listener finds their own meaning within it.</p>
                         </div>
                     </div>
 
                     <!-- Pagination -->
                     <div class="oneMusic-pagination-area wow fadeInUp" data-wow-delay="300ms">
-                        <nav>
+                        <!-- <nav>
                             <ul class="pagination">
                                 <li class="page-item active"><a class="page-link" href="#">01</a></li>
                                 <li class="page-item"><a class="page-link" href="#">02</a></li>
                                 <li class="page-item"><a class="page-link" href="#">03</a></li>
                             </ul>
-                        </nav>
+                        </nav> -->
                     </div>
                 </div>
 
@@ -120,10 +120,10 @@
                             <div class="widget-content">
                                 <ul>
                                     <li><a href="#">Music</a></li>
-                                    <li><a href="#">Events &amp; Press</a></li>
-                                    <li><a href="#">Festivals</a></li>
-                                    <li><a href="#">Lyfestyle</a></li>
-                                    <li><a href="#">Uncategorized</a></li>
+                                    <li><a href="#">Album</a></li>
+                                    <li><a href="#">Artist</a></li>
+                                    <li><a href="#">Videos</a></li>
+                                    <li><a href="#">Genre</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -152,13 +152,10 @@
                             <div class="widget-content">
                                 <ul class="tags">
                                     <li><a href="#">music</a></li>
-                                    <li><a href="#">events</a></li>
                                     <li><a href="#">artists</a></li>
-                                    <li><a href="#">press</a></li>
-                                    <li><a href="#">mp3</a></li>
+                                    <li><a href="#">Albums</a></li>
+                                    <li><a href="#">genre</a></li>
                                     <li><a href="#">videos</a></li>
-                                    <li><a href="#">concerts</a></li>
-                                    <li><a href="#">performers</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -181,7 +178,7 @@
     <!-- ##### Blog Area End ##### -->
 
     <!-- ##### Contact Area Start ##### -->
-    <section class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img" style="background-image: url(img/bg-img/bg-2.jpg);">
+    <!-- <section class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img" style="background-image: url(img/bg-img/bg-2.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -193,9 +190,9 @@
             </div>
 
             <div class="row">
-                <div class="col-12">
+                <div class="col-12"> -->
                     <!-- Contact Form Area -->
-                    <div class="contact-form-area">
+                    <!-- <div class="contact-form-area">
                         <form action="#" method="post">
                             <div class="row">
                                 <div class="col-lg-4">
@@ -227,7 +224,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- ##### Contact Area End ##### -->
      @endsection
 

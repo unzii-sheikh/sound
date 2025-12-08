@@ -1,51 +1,54 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <title>Title</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
+@extends('admin.layout')
 
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-    </head>
+@section('content')
+<div class="container py-5" style="background-color: #2c2f33; min-height: 100vh;">
+    <!-- Page Heading -->
+    <h1 class="text-center mb-4 text-white">Add Genre Category</h1>
+    <hr class="border-light mb-5">
 
-    <body class="bg-dark text-light">
-        <div class="container-fluid">
-            <br>
-            <h1 class="text-center">
-                ADD GENRE CATEGORY
-            </h1>
-            <hr>
-            <form action="/addgenre" method="post">
-                @csrf
-                <b>ADD GENRE</b>
-                <br><br>
-                <input type="text" placeholder="Enter gender name" name="name" class="form-control">
-                <br>
-                <button type="submit" class="btn btn-primary">ADD GENRE</button>
-            </form>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <!-- Form Card -->
+            <div class="card bg-secondary shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title mb-4 text-white text-center">Add Genre</h3>
 
+                    <!-- Alert placeholder -->
+                    <div id="alertPlaceholder"></div>
+
+                    <form id="genreForm" action="{{ url('/addgenre') }}" method="POST">
+                        @csrf
+                        <div class="mb-3">
+                            <label for="genreName" class="form-label text-light"><strong>Genre Name</strong></label>
+                            <input type="text" name="name" id="genreName" placeholder="Enter genre name" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100" onclick="alert()">Add Genre</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <!-- Bootstrap JavaScript Libraries -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
+    </div>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-    </body>
-</html>
+    <!-- Spacer to make page longer -->
+    <div class="my-5"></div>
+</div>
+
+<!-- JavaScript to show alert -->
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="animation.js"></script>
+<script>
+    function alert(){
+    Swal.fire({
+  title: "Successfully added genre!",
+  icon: "primary",
+  iconColor :' #a51e1eff',
+  confirmButtonColor :' #bd1919ff',
+});
+  }
+
+
+</script>
+
+
+
+@endsection

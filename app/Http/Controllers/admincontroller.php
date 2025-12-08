@@ -52,7 +52,10 @@ public function forceDelete($id)
     return redirect()->back()->with('success','User permanently deleted.');
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cb4e7b2a89f59dfcd731ed166b10e8bf1676f7f8
 //genre transfer data to upload artist
  public function artistuploading(){
     $compounds = genre::get();
@@ -127,11 +130,10 @@ public function updatemusic(Request $fer){
    $q->artistid=$fer->artistname;
    $q->albumid=$fer->albumname;
    $q->music=$fer->musictypename;
-   $q->genreid=$fer->genrename;
    $q->file=$fer->musicfileupd;
    $q->thumbnail=$fer->musicthumbnailupd;
    $q->save();
-   return redirect("fetchmusic");
+   return redirect("/musicfetch");
 
 }
 
@@ -160,6 +162,10 @@ public function getmusics()
     $audio =music::join("albums","albums.id","music.albumid")->join('artists',"artists.id","music.artistid")->join('genres','genres.id','artists.genreid')->select('music.id as musicid','music.name as musicname','albums.id as albumsid','artists.id as artistid','artists.name as artistname','albums.name as albumname','genres.name as genrename','music.music as musictype','music.file as musicfile','music.thumbnail as thumbnail')->get();
    return view("index",compact("audio"));
 }
+<<<<<<< HEAD
+=======
+      
+>>>>>>> cb4e7b2a89f59dfcd731ed166b10e8bf1676f7f8
  }
         
     

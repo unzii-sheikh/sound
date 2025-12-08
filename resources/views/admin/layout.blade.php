@@ -39,7 +39,7 @@
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-secondary navbar-dark">
                 <a href="/" class="navbar-brand mx-4 mb-3">
-                    <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>DarkPan</h3>
+                    <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>SOUND</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
@@ -54,25 +54,25 @@
                 <div class="navbar-nav w-100">
                     <a href="index.blade.php" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Add Music</a>
+                        <a href="/musicuploading" class="nav-link dropdown-toggle" ><i class="fa fa-laptop me-2"></i>Add Music</a>
                         <!-- <div class="dropdown-menu bg-transparent border-0">
                             <a href="button.blade.php" class="dropdown-item">Buttons</a>
                             <a href="typography.blade.php" class="dropdown-item">Typography</a>
                             <a href="element.blade.php" class="dropdown-item">Other Elements</a>
                         </div> -->
                     </div>
-                    <a href="widget.blade.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Add Videos</a>
-                    <a href="form.blade.php" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Add Artist</a>
+                  
+                    <a href="/artistupload" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Add Artist</a>
+                    <a href="/addalbum" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Add Album</a>
+                    <a href="/genre" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Add Genra</a>
+                    
+                    <a href="/musicfetch" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Music records</a>
+                    <!-- <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a> -->
                     <a href="/admin.fetch" class="nav-item nav-link"><i class="fa fa-table me-2"></i>User Info</a>
-                    <a href="chart.blade.php" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Add Genra</a>
-
                     <a href="/admin.trash" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Trash</a>
-                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
-                    <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
-                    <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
 
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Add Albums</a>
+                        <!-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Add Albums</a> -->
                         <div class="dropdown-menu bg-transparent border-0">
                             <a href="signin.blade.php" class="dropdown-item">Sign In</a>
                             <a href="signup.blade.php" class="dropdown-item">Sign Up</a>
@@ -93,27 +93,29 @@
                 </a>
                 <a href="#" class="sidebar-toggler flex-shrink-0">
                     <i class="fa fa-bars"></i>
+                    <br>
+                    
                 </a>
-                <form class="d-none d-md-flex ms-4">
+                <!-- <form class="d-none d-md-flex ms-4">
                     <input class="form-control bg-dark border-0" type="search" placeholder="Search">
-                </form>
+                </form> -->
                 <div class="navbar-nav align-items-center ms-auto">
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="fa fa-envelope me-lg-2"></i>
-                            <span class="d-none d-lg-inline-flex">Message</span>
+                        <!-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa fa-envelope me-lg-2"></i> -->
+                            <!-- <span class="d-none d-lg-inline-flex">Message</span> -->
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">
-                                <div class="d-flex align-items-center">
+                                <!-- <div class="d-flex align-items-center">
                                     <img class="rounded-circle" src="admin/img/user.jpg" alt="" style="width: 40px; height: 40px;">
                                     <div class="ms-2">
                                         <h6 class="fw-normal mb-0">Admin send you a message</h6>
                                         <small>15 minutes ago</small>
                                     </div>
-                                </div>
+                                </div> -->
                             </a>
-                            <hr class="dropdown-divider">
+                            <!-- <hr class="dropdown-divider">
                             <a href="#" class="dropdown-item">
                                 <div class="d-flex align-items-center">
                                     <img class="rounded-circle" src="admin/img/user.jpg" alt="" style="width: 40px; height: 40px;">
@@ -151,15 +153,15 @@
                             <a href="#" class="dropdown-item">
                                 <h6 class="fw-normal mb-0">New user added</h6>
                                 <small>15 minutes ago</small>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item">
+                             </a>
+                             <hr class="dropdown-divider"> -->
+                            <!-- <a href="#" class="dropdown-item">
                                 <h6 class="fw-normal mb-0">Password changed</h6>
                                 <small>15 minutes ago</small>
-                            </a>
+                            </a> -->
                             <hr class="dropdown-divider">
                             <a href="#" class="dropdown-item text-center">See all notifications</a>
-                        </div>
+                        </div> 
                     </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
@@ -169,7 +171,7 @@
                         <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">My Profile</a>
                             <a href="#" class="dropdown-item">Settings</a>
-                            <a href="#" class="dropdown-item">Log Out</a>
+                            <a href="/logout" class="dropdown-item">Log Out</a>
                         </div>
                     </div>
                 </div>

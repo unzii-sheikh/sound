@@ -1,3 +1,6 @@
+@extends('admin.layout')
+
+@section('content')
 <!doctype html>
 <html lang="en">
     <head>
@@ -21,7 +24,7 @@
     <body class="bg-dark text-light">
        <div class="container-fluid">
         <br>
-        <h1>UPDATE MUSIC DETAILS</h1>
+        <h1 class="text-center">UPDATE MUSIC DETAILS</h1>
        <hr>
        <form action="/updaterecord" method="post" enctype="multipart/form-data">
         @csrf
@@ -46,18 +49,6 @@
         <option value="{{$alb->id}}" class="text-dark">{{$alb->name}}</option>
     @endforeach
 </select>
-<br>
-<b>ADD GENRE NAME</b>
-            <br>
-           
-            <select name="genrename" class="form-control">
-                <option value="">SELECT CATEGORY OF THE GENRE</option>
-                @foreach ($genre as $gen)
-                <option value="{{$gen->genreid}}">
-                    {{ $gen->genreid }}
-                </option>
-                @endforeach
-            </select>
             <br>
             <b>ENTER MUSIC TYPE</b>
             <br>
@@ -75,7 +66,7 @@
         <p>{{$rep->thumbnail}}</p>
        <input type="file" value="{{$rep->thumbnail}}" class="form-control" name="musicthumbnailupd">
        <br>
-       <button type="submit" >update</button>
+       <button type="submit" class="btn btn-primary" onclick="alert()">update</button>
        <br>
        </form>
        </div>
@@ -90,5 +81,18 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="animation.js"></script>
+<script>
+    function alert(){
+    Swal.fire({
+  title: "Successfully Update music details!",
+  icon: "primary",
+  iconColor :' #a51e1eff',
+  confirmButtonColor :' #bd1919ff',
+});
+  }
+</script>
     </body>
 </html>
+@endsection

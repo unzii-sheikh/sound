@@ -52,8 +52,14 @@ Route::get('/addalbum', function () {
     return view('addingalbum');
 });
 Route::post("/albumadd",[admincontroller::class,("album")]);
+<<<<<<< HEAD
 Route::get('/adminindex', function () {
     return view('admin.index');
+=======
+Route::get('/adminindex', function () 
+{
+    return view();
+>>>>>>> cb4e7b2a89f59dfcd731ed166b10e8bf1676f7f8
 });
 //artist form route 
 
@@ -82,7 +88,24 @@ Route::get("/fetchalbums",[admincontroller::class,("fetchalb")]);
 // music fetch in website
 Route::get("/fetchmuiscweb",[admincontroller::class,("fetchmusicdata")]);
 Route::get("/fetchmusic2cweb",[admincontroller::class,("fetchmusicdata2")]);
+<<<<<<< HEAD
 Route::get('/adminpanel', function () {
+=======
+
+
+// Route::get('/adminpanel', function () {
+//     return view('admin.index');
+// });
+// Route::get('/widget', function () {
+//     return view('admin.widget');
+// });
+// Route::get('/blank', function () {
+//     return view('admin.blank');
+// });
+
+Route::get('/adminpanel', function () {
+
+>>>>>>> cb4e7b2a89f59dfcd731ed166b10e8bf1676f7f8
     return view('admin.index');
 });
 //admin pages
@@ -112,13 +135,13 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     // Fetch all registered users
     Route::get('admin.fetch', [UserController::class, 'fetch'])->name('admin.fetch');
     // Show edit form
-    Route::get('admin.users.{id}.edit', [App\Http\Controllers\UserController::class, 'edit'])->name('admin.edit');
+    Route::get('admin.users.{id}.edit', [UserController::class, 'edit'])->name('admin.edit');
 
     // Update user
-    Route::put('admin.users.{id}', [App\Http\Controllers\UserController::class, 'update'])->name('admin.update');
+    Route::put('admin.users.{id}', [UserController::class, 'update'])->name('admin.update');
 
     // Delete user
-    Route::delete('admin.users.{id}', [App\Http\Controllers\UserController::class, 'destroy'])->name('admin.delete');
+    Route::delete('admin.users.{id}', [UserController::class, 'destroy'])->name('admin.delete');
 
 });
 /// trash //
@@ -140,7 +163,7 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', function () {
         if(Auth::user()->role == "admin"){
-            return view('dashboard');
+            return view('adminpanel');
         }
         else{
             return redirect("/");
