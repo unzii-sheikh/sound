@@ -29,7 +29,7 @@ class admincontroller extends Controller
     return Redirect()->back();
 
 }
-<<<<<<< HEAD
+
   public function destroy($id)
 {
     $user = User::find($id);
@@ -52,7 +52,7 @@ public function forceDelete($id)
     return redirect()->back()->with('success','User permanently deleted.');
 }
 
-=======
+
 //genre transfer data to upload artist
  public function artistuploading(){
     $compounds = genre::get();
@@ -160,8 +160,6 @@ public function getmusics()
     $audio =music::join("albums","albums.id","music.albumid")->join('artists',"artists.id","music.artistid")->join('genres','genres.id','artists.genreid')->select('music.id as musicid','music.name as musicname','albums.id as albumsid','artists.id as artistid','artists.name as artistname','albums.name as albumname','genres.name as genrename','music.music as musictype','music.file as musicfile','music.thumbnail as thumbnail')->get();
    return view("index",compact("audio"));
 }
-      
->>>>>>> 9dc94a51b1765674b285ba5ffd77820d484490c0
  }
         
     

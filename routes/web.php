@@ -33,10 +33,7 @@ Route::get('/album2', function () {
 Route::get('/page', function () {
     return view('layout');
 });
-<<<<<<< HEAD
-=======
 
->>>>>>> 9dc94a51b1765674b285ba5ffd77820d484490c0
 //admin middleware
 Route::middleware([adminmiddleware::class])->group(function(){
     //admin routes
@@ -54,10 +51,10 @@ Route::get('/genre', function () {
 Route::get('/addalbum', function () {
     return view('addingalbum');
 });
-<<<<<<< HEAD
 Route::post("/albumadd",[admincontroller::class,("album")]);
 Route::get('/adminindex', function () {
-=======
+    return view('admin.index');
+});
 //artist form route 
 
  //album route datanaseconnection
@@ -85,10 +82,7 @@ Route::get("/fetchalbums",[admincontroller::class,("fetchalb")]);
 // music fetch in website
 Route::get("/fetchmuiscweb",[admincontroller::class,("fetchmusicdata")]);
 Route::get("/fetchmusic2cweb",[admincontroller::class,("fetchmusicdata2")]);
-
-
 Route::get('/adminpanel', function () {
->>>>>>> 9dc94a51b1765674b285ba5ffd77820d484490c0
     return view('admin.index');
 });
 //admin pages
@@ -106,6 +100,9 @@ Route::get('/blank', function () {
 });
 Route::get('/Addvideos', function () {
     return view('admin.Addvideos');
+});
+Route::get('/userinfo', function () {
+    return view('admin.fetch');
 });
 
 //users rout Crud//
@@ -150,5 +147,4 @@ Route::middleware([
         }
     })->name('dashboard');
 });
-// TRD //
-// Trash page
+

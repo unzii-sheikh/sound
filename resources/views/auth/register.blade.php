@@ -1,68 +1,87 @@
-<x-guest-layout>
-    <div class="min-h-screen flex items-center justify-center"
-        style="background-image: url('public/img/bg-img/b1.jpg');
-               background-size: cover;
-               background-position: center;
-               background-repeat: no-repeat;
-               ">
+@extends('layout')
+@section('content')
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Register</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-        <div class="bg-white/90 backdrop-blur-md p-8 rounded-lg shadow-xl w-full max-w-md">
-    <x-authentication-card>
-        <x-slot name="logo">    
-        </x-slot>
+    <!-- Bootstrap CSS v5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="d-flex justify-content-center align-items-center vh-100" style="background: #000;">
+        <div class="card p-4 shadow-lg" style="width: 400px; background: #111; border: 1px solid #333;">
+            
+            <h2 class="text-center text-white mb-4">Create Your Account</h2>
 
-        <x-validation-errors class="mb-4" />
-        <h2 class="text-2xl font-bold text-center mb-6">Create Your Account</h2>
+            <form method="POST" action="{{ route('register') }}">
+                @csrf
 
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
-
-            <div>
-                <x-label for="name" value="{{ __('Name') }}" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            </div>
-
-            <div class="mt-4">
-                <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            </div>
-
-            <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
-            </div>
-
-            <div class="mt-4">
-                <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
-                <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
-            </div>
-
-            @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
-                <div class="mt-4">
-                    <x-label for="terms">
-                        <div class="flex items-center">
-                            <x-checkbox name="terms" id="terms" required />
-
-                            <div class="ms-2">
-                                {!! __('I agree to the :terms_of_service and :privacy_policy', [
-                                        'terms_of_service' => '<a target="_blank" href="'.route('terms.show').'" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">'.__('Terms of Service').'</a>',
-                                        'privacy_policy' => '<a target="_blank" href="'.route('policy.show').'" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">'.__('Privacy Policy').'</a>',
-                                ]) !!}
-                            </div>
-                        </div>
-                    </x-label>
+                <div class="mb-3">
+                    <label for="name" class="form-label text-light">Name</label>
+                    <input 
+                        type="text" 
+                        class="form-control bg-dark text-white border-secondary" 
+                        id="name" 
+                        name="name" 
+                        value="{{ old('name') }}" 
+                        required 
+                        autocomplete="name">
                 </div>
-            @endif
 
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
+                <div class="mb-3">
+                    <label for="email" class="form-label text-light">Email</label>
+                    <input 
+                        type="email" 
+                        class="form-control bg-dark text-white border-secondary" 
+                        id="email" 
+                        name="email" 
+                        value="{{ old('email') }}" 
+                        required 
+                        autocomplete="email">
+                </div>
 
-                <x-button class="ms-4">
-                    {{ __('Register') }}
-                </x-button>
-            </div>
-        </form>
-    </x-authentication-card>
-</x-guest-layout>
+                <div class="mb-3">
+                    <label for="password" class="form-label text-light">Password</label>
+                    <input 
+                        type="password" 
+                        class="form-control bg-dark text-white border-secondary" 
+                        id="password" 
+                        name="password" 
+                        required 
+                        autocomplete="new-password">
+                </div>
+
+                <div class="mb-3">
+                    <label for="password_confirmation" class="form-label text-light">Confirm Password</label>
+                    <input 
+                        type="password" 
+                        class="form-control bg-dark text-white border-secondary" 
+                        id="password_confirmation" 
+                        name="password_confirmation" 
+                        required 
+                        autocomplete="new-password">
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <a class="text-light text-decoration-underline" href="{{ route('login') }}">
+                        Already registered?
+                    </a>
+                </div>
+
+                <button 
+                    type="submit" 
+                    class="btn w-100 text-white" 
+                    style="background:#222; border:1px solid #555;">
+                    Register
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
